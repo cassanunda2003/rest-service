@@ -17,8 +17,9 @@ import java.util.Objects;
 public class LondonService {
 
     private final RestTemplateBuilder restTemplateBuilder;
-    private final static String ALL_USERS = "https://london-api.onrender.com/users";
-    private final static String LONDON_USERS = "https://london-api.onrender.com/city/London/users";
+
+    private final static String ALL_USERS = "/users";
+    private final static String LONDON_USERS = "/city/London/users";
     public List<User> getUserList(String url) {
 
         RestTemplate restTemplate = restTemplateBuilder.build();
